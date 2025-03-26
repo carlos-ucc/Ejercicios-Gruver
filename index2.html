@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 3</title>
+</head>
+<body>
+
+    <form id="formulario">
+
+        nombre<input type="text" name="nombre" value="Carlos">
+        apellido<input type="text" name="apellido" value="Flores">
+    </form>
+
+
+    <button onclick="Mostrarnombre()">NombreCompleto</button>
+    
+    <div id="nombres"></div>
+
+    <script>
+        function Mostrarnombre(){
+            let formulario = document.forms["formulario"];
+            let texto="";
+            let nom = formulario['nombre'];
+            let apel = formulario['apellido'];
+
+            texto = nom.value + '<br/>' + apel.value;
+
+            document.getElementById('nombres').innerHTML= texto;
+        }
+        
+    </script>
+</body>
+</html>

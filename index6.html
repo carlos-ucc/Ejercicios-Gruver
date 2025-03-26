@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONLOAD</title>
+</head>
+<body onload="myfunction()">
+
+    <h1 id="titulo">Manejo del dom</h1>
+    
+    <br>
+
+    <div id="mostrar"></div>
+
+    <script>
+
+        function myfunction(){
+            alert("entraste a la pagina web");
+
+            let texto = "";
+
+            if(navigator.cookieEnabled){
+                texto="las cookies estan activadas"
+            }else{
+                texto="las cookies estan desactivadas"
+            }
+
+            document.getElementById("mostrar").innerHTML = texto;
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>
